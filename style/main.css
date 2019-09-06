@@ -1,0 +1,48 @@
+
+
+body{
+   
+    background-image: url("https://data.whicdn.com/images/314537231/original.gif");
+    background-repeat: no-repeat;
+  background-size: 1990px ;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-style: none;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color:white;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+     width:900000px;
+     height: 900000px; 
+     align-self: center;
+  }
+  
+.lod{
+    text-align: center;
+    
+}
+.mus{
+    align-content: flex-start;
+}
+.play-some{
+    text-size-adjust: 20px;
+}
+p{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+h1{
+    font-family: 'Zeyada', cursive;
+font-size: 130px;
+color: white;
+}
+
+
+
+embed{
+ color: transparent;
+}

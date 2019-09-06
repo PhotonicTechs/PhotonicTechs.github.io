@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Courgette;
+    background-color: ivory;
+}
+nav{
+    width: 100%;
+    background: black;
+}
+    ul{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }  
+    ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 30px;
+    }
+ul li:hover{
+ background: lightcyan;
+}
+ul li a{
+    color: #ff1751;
+    text-decoration: none;
+    size: 40px;
+}
+.text{
+    text-align: center;
+    font-size: 30px;
+}

@@ -1,0 +1,85 @@
+<html doctype>
+    <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+                <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script type="text/javascript" src="./Libaries/aud/audio.min.js"></script>
+<script type="text/javascript" src="./Libaries/lib/anime.min.js"></script>               
+<link href="https://fonts.googleapis.com/css?family=Zeyada&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="style/main.css">
+<!-----------<script type="text/javascript" src="./java/loading.js"></script>-->
+<!---------------------------------
+  
+______ _           _              _        _____         _                                                                                 
+| ___ \ |         | |            (_)      |_   _|       | |                                                                                
+| |_/ / |__   ___ | |_ ___  _ __  _  ___    | | ___  ___| |__                                                                              
+|  __/| '_ \ / _ \| __/ _ \| '_ \| |/ __|   | |/ _ \/ __| '_ \                                                                             
+| |   | | | | (_) | || (_) | | | | | (__    | |  __/ (__| | | |                                                                            
+\_|   |_| |_|\___/ \__\___/|_| |_|_|\___|   \_/\___|\___|_| |_|                                                                            
+                                                                                                                                                                                                                                                                                     
+        _    _        _____               _       _    _ _           _     _____               _                     _____             _   
+       | |  | |      |_   _|             | |     | |  | | |         | |   |_   _|             | |                   /  __ \           | |  
+ ______| |  | | ___    | | ___  __ _  ___| |__   | |  | | |__   __ _| |_    | | ___  __ _  ___| |__   ___ _ __ ___  | /  \/ __ _ _ __ | |_ 
+|______| |/\| |/ _ \   | |/ _ \/ _` |/ __| '_ \  | |/\| | '_ \ / _` | __|   | |/ _ \/ _` |/ __| '_ \ / _ \ '__/ __| | |    / _` | '_ \| __|
+       \  /\  /  __/   | |  __/ (_| | (__| | | | \  /\  / | | | (_| | |_    | |  __/ (_| | (__| | | |  __/ |  \__ \ | \__/\ (_| | | | | |_ 
+        \/  \/ \___|   \_/\___|\__,_|\___|_| |_|  \/  \/|_| |_|\__,_|\__|   \_/\___|\__,_|\___|_| |_|\___|_|  |___/  \____/\__,_|_| |_|\__|
+    1919x942                                                                                                                 
+  --------------------------------------->
+
+
+   <head>
+           <body>     
+            
+                   <div  style="margin: 0 auto; display: table;" id="mus">
+                      <audio  src="./mus/ruck.mp3" preload="auto">
+                      </audio>
+                    
+                   </div>
+                   <p style="margin: 0 auto; display: table;" id="play-some"> Play Some Music While You Wait.<br>
+                    This May Take Awhile</p>
+                  
+                  
+                   <div class="lod">
+                           <h1>
+                        Please wait.....
+                           </h1>
+                   </div>
+              
+           </body>
+         
+          
+   </head>
+  <!----- <div class="mus">
+                <embed src="mus/ruck.mp3" width="180" height="90" autostart="true" hidden="false">
+        --->   </div>
+        <!-----<meta http-equiv="refresh" content="5;url=main1.html">---->
+   <script>
+      audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+    
+setTimeout("location.href = 'loading.html';",30000);
+var bounceUp = anime({
+  autoplay: false, 
+  targets:  '.lod', 
+  translateY: {
+  value:    ['170px', '15px'], 
+    duration: 575,
+    easing:   'easeOutQuad',
+  },
+  complete:  function(){ bounceDown.restart() }, 
+});
+
+
+var bounceDown = anime({
+  autoplay: false,  
+  targets:  '.lod',
+  translateY: {
+ value:    ['15px', '190px'], 
+   duration: 575,
+   easing:   'easeInQuad',
+  },
+  complete:  function(){ bounceUp.restart() }, 
+});
+
+bounceDown.play(); 
+</script>
+
